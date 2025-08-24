@@ -5,6 +5,11 @@ Packaged into a desktop app using **PyInstaller**, so users can run it without i
 
 ---
 
+## Releases
+https://github.com/KCoder-programming/FileShare/releases
+
+---
+
 ## Features
 - Upload multiple files from browser
 - Remove uploaded files
