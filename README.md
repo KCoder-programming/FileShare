@@ -47,6 +47,6 @@ Do not expose it directly to the internet. If you want to host it, use a product
 ---
 
 ## License
-**MIT License**
+[**MIT License**](https://github.com/KCoder-programming/FileShare?tab=MIT-1-ov-file)
 
 Copyright (c) 2025 KCoder-programming
