@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}Home{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>FileShare local-network Website</h1>
+        <nav>
+            <a href="/">Downloads</a> |
+            <a href="/upload">Upload</a> |
+            <a href="/about">About</a>
+        </nav>
+    </header>
+    
+    <main>
+        {% block content %}
+
+        <br>
+        <h2>Welcome to the KCoder's Share Website!</h2>
+        <a href="/upload"><button>Share</button></a>
+        <div style="margin-top: 20px; font-size: 14px; color: gray;">
+            <b>To access this page from another device:</b><br>
+            <img src="{{ url_for('static', filename='qr.png') }}" alt="QR Code" width="180"><br>
+            Visit: <code><a href="{{ local_ip }}">{{ local_ip }}</a></code> on the same Wi-Fi network. <br>
+            Both devices should be connected on same Wi-Fi network. <br>
+        </div>
+
+        <br><hr><br>
+        <table>
+            {% for file in files %}
+            <tr>
+                <td>{{ file }}</td>
+                <td><a href="{{ url_for('static', filename='uploaded_files/{file}'.format(file=file))}}" target="_blank" rel="noopener noreferrer">
+                    <button>Download</button>
+                </a></td>
+                <td><a href="/delete/{{ file | urlencode }}"><button>Delete</button></a></td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <script>
+            setInterval(() => {
+                fetch('/')
+                .then(res => {
+                    if (!res.ok) {
+                        location.reload(); // reload if request fails
+                    }
+                });
+            }, 15000);
+        </script>
+
+        {% endblock %}
+    </main>
+</body>
+</html>
