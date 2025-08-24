@@ -88,4 +88,4 @@ if __name__=="__main__":
 
     sleep(1)
     webview.create_window('FileShare', f"http://{ip}:5000/")
-    webview.start(icon=get_resource_path(path.join("static", "icon.ico")), gui='edgechromium')
+    webview.start(icon=get_resource_path(path.join("static", "icon.ico")), gui='edgechromium')    #set: gui='qt' if in linux and install pyside or pyqt if you encounter error
