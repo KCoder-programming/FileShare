@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Share{% endblock %}
+
+{% block content %}
+    <h2>Share Page.</h2>
+    <h4>
+    <form action="/upload/submit" method="post" enctype="multipart/form-data">
+        <label for="file">Upload file:</label><br><br>
+        <input type="file" name="file" id="file" required multiple><br><br>
+        <input type="reset" value="Reset">&ensp;<input type="submit" value="Upload">
+    </form>
+    <br><br>
+    <a href="/">Home</a>
+    </h4>
+{% endblock %}
