@@ -39,9 +39,23 @@ https://github.com/KCoder-programming/FileShare/releases
 
 ### Note (for advance users and developers)
 
-This app uses Flask’s development server, which is fine for local/LAN usage.
-
-Do not expose it directly to the internet. If you want to host it, use a production WSGI server
+1. This app uses Flask’s development server, which is fine for local/LAN usage.
+2. Do not expose it directly to the internet. If you want to host it, use a production WSGI server
+3. In linux if you get error:
+   ```
+   You must have either QT or GTK with Python extensions installed in order to use pywebview.
+   ```
+   to remove error with QT method-
+   
+   a) Change the gui option to 'qt'  at last line of code in app.py instead of 'edgechromium'
+      ```python
+      webview.start(icon=get_resource_path(path.join("static", "icon.ico")), gui='edgechromium')   # Windows (Edge)
+      webview.start(icon=get_resource_path(path.join("static", "icon.ico")), gui='qt')             # Linux (QtWebEngine)
+      ```
+   b) For Qt: Easiest fix, run the command in terminal
+      ```bash
+      pip install pywebview[qt]
+      ```
 
 ---
 
