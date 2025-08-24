@@ -43,3 +43,10 @@ Do not expose it directly to the internet. If you want to host it, use a product
 ### Screenshots:
 <img width="686" height="551" alt="image" src="https://github.com/user-attachments/assets/79e48e10-9b57-4e7d-a2f3-5ec348f78043" />
 <img width="686" height="631" alt="image" src="https://github.com/user-attachments/assets/129edc3a-efc2-4a7a-ba5a-98cd012a7214" />
+
+---
+
+## License
+**MIT License**
+
+Copyright (c) 2025 KCoder-programming
