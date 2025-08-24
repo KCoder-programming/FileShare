@@ -6,7 +6,7 @@
 </head>
 <body>
     <header>
-        <h1>Kavya's Share Website</h1>
+        <h1>FileShare local-network Website</h1>
         <nav>
             <a href="/">Downloads</a> |
             <a href="/upload">Upload</a> |
@@ -18,12 +18,13 @@
         {% block content %}
 
         <br>
-        <h2>Welcome to the Kavya's Share Website!</h2>
+        <h2>Welcome to the KCoder's Share Website!</h2>
         <a href="/upload"><button>Share</button></a>
         <div style="margin-top: 20px; font-size: 14px; color: gray;">
             <b>To access this page from another device:</b><br>
             <img src="{{ url_for('static', filename='qr.png') }}" alt="QR Code" width="180"><br>
             Visit: <code><a href="{{ local_ip }}">{{ local_ip }}</a></code> on the same Wi-Fi network. <br>
+            Both devices should be connected on same Wi-Fi network. <br>
         </div>
 
         <br><hr><br>
